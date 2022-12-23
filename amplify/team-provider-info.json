@@ -14,11 +14,14 @@
     },
     "categories": {
       "auth": {
-        "authfedAuth": {}
+        "authfedAuth": {},
+        "userPoolGroups": {}
       },
       "function": {
         "authfedAuthPostConfirmation": {
-          "GROUP": "User"
+          "GROUP": "User",
+          "deploymentBucketName": "amplify-authfed-dev-230813-deployment",
+          "s3Key": "amplify-builds/authfedAuthPostConfirmation-393235574d706b5a3835-build.zip"
         }
       }
     }
