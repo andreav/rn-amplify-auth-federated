@@ -3,8 +3,19 @@ import {Auth} from 'aws-amplify';
 import {Authenticator, withAuthenticator} from '@aws-amplify/ui-react-native';
 import {FederatedProviderButtons} from '@aws-amplify/ui-react-native/dist/Authenticator/common';
 import {CognitoHostedUIIdentityProvider} from '@aws-amplify/auth';
+import {Text} from 'react-native';
 
 const withAuthfedAuthenticator = App => {
+  const formFields = {
+    signUp: {
+      name: {
+        placeholder: 'AAAAAAAAAA',
+        // isRequired: true,
+        label: 'Email:',
+      },
+    },
+  };
+
   return withAuthenticator(App, {
     components: {
       SignIn: ({fields, ...props}) => (
@@ -29,6 +40,24 @@ const withAuthfedAuthenticator = App => {
           />
         </>
       ),
+      // SignUp: ({fields, ...props}) => {
+      //   <Authenticator.SignUp
+      //     {...props}
+      //     fields={fields.map(f => {
+      //       if (f.name === 'name') {
+      //         console.log('name');
+      //         return {
+      //           ...f,
+      //         };
+      //       } else {
+      //         return f;
+      //       }
+      //     })}
+      //     Header={() => {
+      //       <Text>AAAAAAAAAAAAA</Text>;
+      //     }}
+      //   />;
+      // },
     },
   });
 };

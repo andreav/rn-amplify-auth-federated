@@ -113,3 +113,6 @@ refs - https://ui.docs.amplify.aws/react-native/getting-started/installation
 
     import 'react-native-url-polyfill/auto';
     import 'react-native-get-random-values';
+
+# configure deep link
+
