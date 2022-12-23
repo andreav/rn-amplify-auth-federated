@@ -9,7 +9,18 @@
       "UnauthRoleName": "amplify-authfed-dev-230813-unauthRole",
       "StackName": "amplify-authfed-dev-230813",
       "StackId": "arn:aws:cloudformation:eu-central-1:403723480962:stack/amplify-authfed-dev-230813/4c0e9bc0-830e-11ed-ba70-02301166f434",
-      "AmplifyAppId": "d2i4kkt683dyn7"
+      "AmplifyAppId": "d2i4kkt683dyn7",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-authfed-dev-230813-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "authfedAuth": {}
+      },
+      "function": {
+        "authfedAuthPostConfirmation": {
+          "GROUP": "User"
+        }
+      }
     }
   }
 }
