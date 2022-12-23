@@ -114,5 +114,19 @@ refs - https://ui.docs.amplify.aws/react-native/getting-started/installation
     import 'react-native-url-polyfill/auto';
     import 'react-native-get-random-values';
 
-# configure deep link
+# configure identity providers
 
+ref - https://docs.amplify.aws/lib/auth/social/q/platform/react-native/#setup-your-auth-provider
+
+# Add deep link
+
+Inside AndroidManifest:
+
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="authfed" />
+        </intent-filter>
+
+_Note:_ after social login the page will not change (need more configuration to work as expected but this is just a demo). While in debugging, refresh teh app and "AScreen" will appear. You are logged in.
